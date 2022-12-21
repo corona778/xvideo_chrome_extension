@@ -15,13 +15,13 @@
       "js": ["js/jquery-3.6.3.min.js",
              "js/page.js"],
       // "css": ["css/custom.css"],
-      "run_at": "document_start"
+      "run_at": "document_end"
     }
   ],
   "action": {
-    //"default_icon": "img/dino.png",
+    /*"default_icon": "img/dino.png",
     "default_title": "XVideo Url graber",
-    "default_popup": "html/popup.html"
+    "default_popup": "html/popup.html" */
   },
    "permissions": [
     "activeTab",
