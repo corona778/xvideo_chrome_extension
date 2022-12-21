@@ -4,18 +4,25 @@
   "manifest_version": 3,
   "background": {
     "service_worker": "js/background.js"
-  },/*
-  "content_script":[
+  },
+
+  // 需要直接注入页面的JS
+  "content_scripts": [
     {
-      "run_at":"document_start",
-      "js":[
-        "js/jquery-3.6.3.min.js",
-        "js/page.js"
-      ],
-      "matches":["https://www.xvideos.com/"]
+      // "<all_urls>" 表示匹配所有地址
+      "matches": ["https://www.xvideos.com/*"],
+      // 多个JS按顺序注入
+      "js": ["js/jquery-3.6.3.min.js",
+             "js/page.js"],
+      // "css": ["css/custom.css"],
+      "run_at": "document_start"
     }
-  ],*/
-  "action": {},
+  ],
+  "action": {
+    //"default_icon": "img/dino.png",
+    "default_title": "XVideo Url graber",
+    "default_popup": "html/popup.html"
+  },
    "permissions": [
     "activeTab",
     "scripting"
