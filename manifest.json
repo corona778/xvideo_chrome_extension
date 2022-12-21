@@ -1,0 +1,24 @@
+{
+  "name": "XVideo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "js/background.js"
+  },/*
+  "content_script":[
+    {
+      "run_at":"document_start",
+      "js":[
+        "js/jquery-3.6.3.min.js",
+        "js/page.js"
+      ],
+      "matches":["https://www.xvideos.com/"]
+    }
+  ],*/
+  "action": {},
+   "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [ "https://www.xvideos.com/" ]
+}
