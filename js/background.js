@@ -33,7 +33,8 @@ chrome.runtime.onInstalled.addListener(async () => {
 
 
 function reddenPage() {
-  const collection = document.getElementsByClassName("thumb-block tb_full_init tbm-init-ok");
+   
+  const collection = document.getElementById('tabVideos').getElementsByClassName("mozaique cust-nb-cols post-blocks")[0].getElementsByClassName("thumb-block tb_full_init tbm-init-ok");
   let set = new Set();
   for (let i = 0; i < collection.length; i++) {
     let div = collection[i].getElementsByClassName('thumb')[0];
